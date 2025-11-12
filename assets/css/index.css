@@ -16,6 +16,10 @@ div{
   background-size: contain;
   background-repeat: no-repeat;
 }
+img{
+  max-width: 100%;
+  object-fit: contain;
+}
 body{
   display: flex;
   flex-direction: column;
@@ -170,6 +174,11 @@ section:nth-child(2)>div:first-child>p{
   grid-column: 2/3;
   grid-row: 2/3;
   background-color: #D8D8D8;
+  display: flex;
+}
+.otherCategorys div{
+  width: 100px;
+  height: 100px;
 }
 
 /*section:nth-child(2)>div:nth-child(2){
