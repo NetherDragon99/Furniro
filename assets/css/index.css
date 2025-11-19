@@ -93,7 +93,7 @@ section:nth-child(2){
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 500px;
+  height: 80dvh;
   margin-top: 50px;
   position: relative;
 }
@@ -118,48 +118,77 @@ section:nth-child(2)>div:first-child>p{
 
 .categorys{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3fr 2fr;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 60% 40%;
   width: 100%;
-  height: 500px;
+  height: 70dvh;
 }
 .categoryImage{
   grid-column: 1/2;
   grid-row: 1/3;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
+  background-color: #D8D8D8;
 }
 .categoryImage img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  transition: 1s;
+}
+@keyframes mainImage{
+  0%{
+    z-index: 3;
+  }95%{
+    transform:translateX(150%);
+  }100%{
+    transform:translate(0);
+    z-index: 1;
+  }
 }
 .categoryDescription{
   grid-column: 2/3;
   grid-row: 1/2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 30px;
   justify-content: space-between;
+  height: 2fr;
 }
-.categoryDescription div{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 75%;
+
+.s1description{
+  height: 60%;
   width: 100%;
+  overflow: hidden;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
 }
-.categoryDescription h4{
+.s1description div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-100%);
+}
+.s1description [class="0"]{
+  transform: translateX(0);
+}
+.s1description div h4{
   font-size: 64px;
   line-height: 64px;
   font-weight: 700;
   margin-bottom: 50px;
 }
-.categoryDescription p{
-  text-align: center;
-  font-size: 16px;
+.s1description div p{
+  text-align: start;
+  font-size: 18px;
+  width: 70%;
 }
+
 .categoryDescription button{
   background-color: #e7ac23;
   border: none;

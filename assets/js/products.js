@@ -1678,3 +1678,24 @@ export const products =
     }
   }
 ]
+
+
+
+
+
+/* 
+Living Room	>>
+ LIVING SPACES
+Dining Room >>
+	DINING ESSENTIALS
+Bedroom >>
+	BEDROOM RETREATS
+Office >>
+	HOME OFFICE
+Kitchen >>
+	STORAGE SOLUTIONS and DINING ESSENTIALS
+Hallway >>
+	STORAGE SOLUTIONS and ACCENT SEATING
+Outdoor >>
+	ACCENT SEATING and LIVING SPACES
+*/
