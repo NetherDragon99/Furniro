@@ -13,3 +13,11 @@
   }
 
 }
+@media (max-width:930px) {
+  .categoryImage{
+    display: none ;
+  }
+  .S1RightSection{
+    width: 100%;
+  }
+}

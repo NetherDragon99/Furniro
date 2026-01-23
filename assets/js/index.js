@@ -32,75 +32,85 @@ function section1(){
 	let selectedSection1ItemLength = document.querySelectorAll('.categoryImage>img').length - 1;
 	let section1dirction = 'right';
 	console.log(selectedSection1ItemLength);
-	document.querySelector(`.section1cards [class="${(selectedSection1Item)}"] img`).style.cssText = 'opacity: 1; transition: 1s';
+	
 
 	const section1motion = () => {
 		let tempSection1item = selectedSection1Item;
 
 
 		if (section1dirction === 'right') {
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.cssText = 'opacity: .7; transition: 1s';
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 25%; z-index: 9; transition: .9s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.85); right: 25%; z-index: 9; transition: .9s'
+
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.transition = '1s';
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.opacity = '.4';
+
 			tempSection1item = checker(tempSection1item + 1);
 			//0 >> 6
+			
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(1); right: 50%; z-index: 10; transition: 1s'
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.cssText = 'opacity: 1; transition: 1s';
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.opacity = '1';
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.8); right: 50%; z-index: 10; transition: 1s'
 			tempSection1item = checker(tempSection1item + 1);
 			//1 >> 0
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 75%;; z-index: 9; transition: 1s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.85); right: 75%;; z-index: 9; transition: 1s'
 			tempSection1item = checker(tempSection1item + 1);
 			//2 >> 1 
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.6); right: 95%; z-index: 8; transition: 1s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 95%; z-index: 8; transition: 1s'
 			tempSection1item = checker(tempSection1item + 1);
 			//3 >> 2
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.4); right: 110%; z-index: 7; transition: 1s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.55); right: 110%; z-index: 7; transition: 1s'
 			tempSection1item = checker(tempSection1item + 1);
 			//4 >> 3
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.4); right: -10%; z-index: 7; transition: .9s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(.55); right: -10%; z-index: 7; transition: .9s'
 			tempSection1item = checker(tempSection1item + 1);
 			//5 >> 4
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.6); right: 5%; z-index: 8; transition: .9s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 5%; z-index: 8; transition: .9s'
 			//6 >> 5
 
+			
+			
 
 		} else {
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.cssText = 'opacity: .7; transition: 1s';
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 75%; z-index: 9; transition: .9s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.85); right: 75%; z-index: 9; transition: .9s;'
+
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.transition = '1s';
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.opacity = '.4';
+
 			tempSection1item = checker(tempSection1item - 1);
 			//0 >> 1
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.cssText = 'opacity: 1; transition: 1s';
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(1); right: 50%; z-index: 10; transition: 1s'
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.8); right: 50%; z-index: 10; transition: 1s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"] img`).style.opacity = '1';
+
 			tempSection1item = checker(tempSection1item - 1);
 			//6 >> 0
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 25%; z-index: 9; transition: 1s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.85); right: 25%; z-index: 9; transition: 1s'
 			tempSection1item = checker(tempSection1item - 1);
 			//5 >> 6
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.6); right: 5%; z-index: 8; transition: 1s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 5%; z-index: 8; transition: 1s'
 			tempSection1item = checker(tempSection1item - 1);
 			//4 >> 5
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.4); right: -10%; z-index: 7; transition: 1s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.55); right: -10%; z-index: 7; transition: 1s'
 			tempSection1item = checker(tempSection1item - 1);
 			//3 >> 4
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.4); right: 110%; z-index: 7; transition: .9s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.55); right: 110%; z-index: 7; transition: .9s'
 			tempSection1item = checker(tempSection1item - 1);
 			//2 >> 3
 
-			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.6); right: 95%; z-index: 8; transition: .9s'
+			document.querySelector(`.section1cards [class="${(tempSection1item)}"]`).style.cssText = 'transform: translateX(50%) scale(0.7); right: 95%; z-index: 8; transition: .9s'
 			//1 >> 2
 		}
 	};
@@ -110,19 +120,26 @@ function section1(){
 		document.querySelectorAll(`.categoryImage img`).forEach((v) => {
 			v.style.cssText = "opacity: 0;"
 		});
+		document.querySelectorAll(`.S1RightSectionBluredImages img`).forEach((v) => {
+			v.style.cssText = "opacity: 0;"
+		});
 
 		if (section1dirction === 'right') {
 			imagenumber = checker(imagenumber +1);
 			
 			setTimeout(()=>{
 				document.querySelector(`.categoryImage [class='${checker(imagenumber)}']`).style.cssText = 'opacity: 1;';
+
+				document.querySelector(`.S1RightSectionBluredImages [class='${checker(imagenumber)}']`).style.cssText = 'opacity: 1;';
 				
-			},500)
+			},500);
 		} else {
 			imagenumber = checker(imagenumber -1);
 			
 			setTimeout(()=>{
 				document.querySelector(`.categoryImage [class='${checker(imagenumber)}']`).style.cssText = 'opacity: 1;';
+
+				document.querySelector(`.S1RightSectionBluredImages [class='${checker(imagenumber)}']`).style.cssText = 'opacity: 1;';
 				
 			},500)
 		}
@@ -133,10 +150,10 @@ function section1(){
 		if (section1dirction === 'right') {
 			document.querySelectorAll(`.s1description div`).forEach((v)=>{
 				v.style.cssText="transform: translateX(-100%); transition: 1s;";
-			})
+			});
 			setTimeout(()=>{
 				document.querySelector(`.s1description [class="${checker(textNumber +1)}"]`).style.cssText="transform: translateX(0); transition: 1s;"
-			},500)
+			},500);
 		} else {
 			document.querySelectorAll(`.s1description div`).forEach((v)=>{
 				v.style.cssText="transform: translateX(-100%); transition: 1s;";
